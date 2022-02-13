@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+    <title>
+        X = 200 - Y
+    </title>
+
+    <style>
+        .split {
+            height: 100%;
+            width: 50%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+        .left {
+            left: 0;
+            background-color: white;
+        }
+        .right {
+            right: 0;
+            background-color: black;
+        }
+        .centered {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+    </style>
+
+    <div class="split left">
+        <div class="centered">
+            <h2 id="number" style="display: inline; color: black; font-size: 80px;"></h2>
+        </div>  
+    </div>
+
+    <div class="split right">
+        <div class="centered">
+            <h2 id="answer" style="display: inline; color: white; font-size: 80px;"></h2>
+        </div>
+    </div> 
+
+    <script>
+        var number = Math.floor(Math.random() * 200);
+        var answer = 200 - number
+        document.getElementById("number").innerHTML = ("&#128181 " + number);
+        setTimeout(function(){
+            document.getElementById("answer").innerHTML = ("&#128181 " + answer);
+        }, 2500); 
+        window.setTimeout(function () {
+            window.location = window.location
+        }, 3700);
+    </script>
